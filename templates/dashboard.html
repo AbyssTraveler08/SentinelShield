@@ -1,0 +1,17 @@
+<h1>SentinelShield Dashboard</h1>
+
+<p>Total Attacks: {{ data.total_attacks }}</p>
+
+<h2>Attack Distribution</h2>
+<ul>
+{% for attack, count in data.attack_distribution.items() %}
+<li>{{ attack }} : {{ count }}</li>
+{% endfor %}
+</ul>
+
+<h2>IP Activity</h2>
+<ul>
+{% for ip, count in data.ip_distribution.items() %}
+<li>{{ ip }} : {{ count }}</li>
+{% endfor %}
+</ul>
